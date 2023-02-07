@@ -20,12 +20,7 @@ const Navbar = () => {
             )}
           </div>
           <div className=" mr-4  flex w-full justify-between md:w-auto">
-            {/* <Image
-              src="/images/foundation/icon.jpg"
-              width={40}
-              height={40}
-              alt=""
-            /> */}
+            
             <CiSquareCheck
               src=""
               alt="logo"

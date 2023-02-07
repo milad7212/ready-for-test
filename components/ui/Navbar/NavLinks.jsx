@@ -44,18 +44,20 @@ const NavLinks = () => {
                           {mysublinks.Head}
                         </h1>
                         {mysublinks.sublink.map((slink, index) => (
+                          <Link
+                          key={index}
+                          href={`/${mysublinks.Head}/${slink.name}/`}
+                          className="hover:text-primary "
+                        >
                           <li
-                            key={index}
+                            
                             className="my-2.5 pr-2 text-sm text-gray-600 transition-all duration-150 ease-out hover:font-bold hover:text-black"
                           >
                         
-                            <Link
-                              href={`/${mysublinks.Head}/${slink.name}/`}
-                              className="hover:text-primary"
-                            >
+                            
                               {slink.name}
-                            </Link>
                           </li>
+                            </Link>
                         ))}
                       </div>
                     ))}

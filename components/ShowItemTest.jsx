@@ -42,7 +42,7 @@ function ShowItemTest() {
   }
   function classForCorrectAns(witchOption) {
     if (witchOption == correctOption && showAnswer) {
-      return "shadow-test rounded-lg  bg-ciGreen px-4 py-2 text-justify text-sm font-bold";
+      return "shadow-test rounded-lg  bg-green-400 px-4 py-2 text-justify text-sm font-bold";
     } else {
       return "";
     }
@@ -51,7 +51,7 @@ function ShowItemTest() {
   return (
     <div className="my-4">
       <p className=" py-4 text-xl font-bold text-gray-800">مثالی از سوالات :</p>
-      <div className="relative  mx-auto max-w-5xl rounded-lg bg-ciForeground p-3 shadow-xl md:p-4 ">
+      <div className="relative   mx-auto max-w-5xl rounded-lg bg-gray-100 p-3 shadow-xl md:p-4 ">
         <p className="my-4  text-justify text-sm font-bold md:text-base">
           {data.question}
         </p>

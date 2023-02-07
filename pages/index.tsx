@@ -19,7 +19,7 @@ export default function Home() {
       <div className="container mx-auto px-6 flex flex-col">
         <Hero />
         <StartExam/>
-        {/* <ListImportantPart /> */}
+       
         <WhyUse/>
         <ShowItemTest/>
         <ContactWhitMe/>
