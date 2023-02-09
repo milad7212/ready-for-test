@@ -3,7 +3,8 @@ import { booksData } from "../data/data";
 import {SiBookstack} from "react-icons/si";
 import Link from "next/link";
 
-function ListBooksExam({title}) {
+function ListBooksExam({title,data}) {
+  console.log('milad', data)
   return (
     <div className=" mx-auto max-w-7xl px-4">
       <div className="my-20 mx-auto flex flex-col items-center justify-between sm:flex-row">
@@ -40,9 +41,9 @@ function ListBooksExam({title}) {
       </div>
 
       <div className="grid grid-cols-12 gap-4">
-        {Object.entries(booksData).map(([key, item], index) => (
+        {data?.resources?.map((resource, index) => (
           <div
-            key={index}
+            key={resource._id}
             className="mb-15 col-span-12 sm:col-span-6 md:col-span-4 xl:col-span-3"
           >
             <div className="  relative flex h-full justify-center rounded-lg bg-gray-50 pt-4 shadow-lg">
@@ -50,16 +51,16 @@ function ListBooksExam({title}) {
                 <div className=" flex flex-grow flex-col px-4">
                   <span className="mb-2 flex items-center text-sm font-semibold text-blue-700">
                     مبحث
-                    <span className="mr-1">{key}</span>
+                    <span className="mr-1">{resource.number}</span>
                   </span>
                   <a
                     href="/series/learn-mvc-in-php-and-build-a-modern-framework"
                     className="my-2 inline-block"
                   >
                     <span className=" text-xl font-bold text-gray-800 transition duration-200 hover:text-blue-700">
-                      {item.name}
+                      {resource.name}
                       <span className="mr-4 text-sm font-bold">
-                        {item.edit}
+                        {resource.edit}
                       </span>
                     </span>
                   </a>
@@ -134,7 +135,7 @@ function ListBooksExam({title}) {
                   </div>
                   <div className="flex justify-center border-t border-gray-300 border-opacity-10">
                     <Link
-                      href="/book/1"
+                      href={`/book/${resource.number}`}
                       className="  hover:text-dark-700  group my-4 flex transform items-center text-base font-bold text-blue-700 transition duration-200"
                     >
                       <span>مشاهده </span>
