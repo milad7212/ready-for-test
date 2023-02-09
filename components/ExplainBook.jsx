@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 
 
-function ExplainBook() {
+function ExplainBook({data}) {
   return (
     <section className="mt-10 mb-9">
       <div className="mx-auto max-w-7xl px-4">
@@ -13,8 +13,8 @@ function ExplainBook() {
                 <div className="mb-3  flex items-center md:mb-5 ">
                   <h2 className="text-gray-700 inline-block text-xl font-bold  md:text-5xl">
                     <span className="">مبحث </span>
-                    <span className="">1 :</span>
-                    <span className="mr-1">تعاریف</span>
+                    <span className="">{data?.number} :</span>
+                    <span className="mr-1">{data?.name}</span>
                   </h2>
                 </div>
                 <p className=" mb-5 text-base font-normal leading-7 text-gray-500 md:text-xl md:leading-8">

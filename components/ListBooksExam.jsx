@@ -1,10 +1,10 @@
 import React from "react";
 import { booksData } from "../data/data";
-import {SiBookstack} from "react-icons/si";
+import { SiBookstack } from "react-icons/si";
 import Link from "next/link";
 
-function ListBooksExam({title,data}) {
-  console.log('milad', data)
+function ListBooksExam({ title, data }) {
+  console.log("milad", data);
   return (
     <div className=" mx-auto max-w-7xl px-4">
       <div className="my-20 mx-auto flex flex-col items-center justify-between sm:flex-row">
@@ -53,8 +53,8 @@ function ListBooksExam({title,data}) {
                     مبحث
                     <span className="mr-1">{resource.number}</span>
                   </span>
-                  <a
-                    href="/series/learn-mvc-in-php-and-build-a-modern-framework"
+                  <Link
+                    href={`/book/${resource.number}`}
                     className="my-2 inline-block"
                   >
                     <span className=" text-xl font-bold text-gray-800 transition duration-200 hover:text-blue-700">
@@ -63,7 +63,7 @@ function ListBooksExam({title,data}) {
                         {resource.edit}
                       </span>
                     </span>
-                  </a>
+                  </Link>
                   <p className="text-gray-360  mb-2 overflow-hidden text-sm  font-normal leading-6"></p>
                 </div>
 
@@ -71,7 +71,9 @@ function ListBooksExam({title,data}) {
                   <div className="mb-4 flex px-4 items-center justify-center">
                     <SiBookstack size={20} className=" ml-2 text-blue-700" />
                     <span className="mx-2 font-bold text-xl">189</span>
-                    <span className="text-sm font-semibold text-gray-500">سوال از آزمون های گذشته</span>
+                    <span className="text-sm font-semibold text-gray-500">
+                      سوال از آزمون های گذشته
+                    </span>
                   </div>
                   <div className="px-4 pb-1">
                     <div className>
