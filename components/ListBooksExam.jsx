@@ -3,8 +3,9 @@ import { booksData } from "../data/data";
 import { SiBookstack } from "react-icons/si";
 import Link from "next/link";
 
-function ListBooksExam({ title, data }) {
-  
+function ListBooksExam({ title, data ,dataCount}) {
+  console.log('dataCount', dataCount)
+  console.log('data :>> ', data);
   return (
     <div className=" mx-auto max-w-7xl px-4">
       <div className="my-20 mx-auto flex flex-col items-center justify-between sm:flex-row">
@@ -70,7 +71,7 @@ function ListBooksExam({ title, data }) {
                 <div>
                   <div className="mb-4 flex px-4 items-center justify-center">
                     <SiBookstack size={20} className=" ml-2 text-blue-700" />
-                    <span className="mx-2 font-bold text-xl">189</span>
+                    <span className="mx-2 font-bold text-xl">{dataCount?.[resource.number] ?? 0}</span>
                     <span className="text-sm font-semibold text-gray-500">
                       سوال از آزمون های گذشته
                     </span>

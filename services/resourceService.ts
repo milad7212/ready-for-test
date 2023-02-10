@@ -7,3 +7,9 @@ export const getResource = (exam:object) => {
     
     return axios.post(url,exam)
 };
+
+export const getCountResource = () => {
+    const url =`${BASE_URL}/resource/count/`;
+    
+    return axios.get(url)
+};
