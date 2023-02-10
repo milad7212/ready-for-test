@@ -13,22 +13,23 @@ function ItemReadTest({
   bookedAnsQuestion,
 }) {
   const {
-    number,
+  
     option1,
     option2,
     option3,
     option4,
-    title,
-    correctOption,
+    year,
+    month,
+    correctAnswer,
     paragraph,
-    page,
+    pageNumber,
   } = data;
   const [showAnswer, setShowAnswer] = useState(false);
   function onChangeValue(event) {
     selectAnsQuestion(event.target.value, indexQuestion);
   }
   function classForCorrectAns(witchOption) {
-    if (witchOption == correctOption && showAnswer) {
+    if (witchOption == correctAnswer && showAnswer) {
       return "shadow-test rounded-lg  bg-green-400 px-4 py-2 text-justify text-sm font-bold";
     } else {
       return "";
@@ -60,16 +61,16 @@ function ItemReadTest({
       </div>
       {showAnswer && (
         <div className="my-3 flex justify-between">
-          <div className="shadow-page  rounded-lg bg-gray-200 px-3 py-2">
+          <div className="shadow rounded-lg bg-gray-200 px-3 py-2">
             <span className="ml-2 text-xs font-bold">صفحه</span>
-            <span className="font-bold">{page}</span>
+            <span className="font-bold">{pageNumber}</span>
           </div>
-          <div className="shadow-page  whitespace-nowrap rounded-lg bg-gray-200 px-3 py-2">
+          <div className="shadow whitespace-nowrap rounded-lg bg-gray-200 px-3 py-2">
             <span className="ml-2 text-xs font-bold">بند</span>
             <span className="font-bold">{paragraph}</span>
           </div>
-          <div className="shadow-page  rounded-lg bg-gray-200 px-3 py-2 ">
-            <span className="ml-2 text-xs font-bold">{title}</span>
+          <div className="shadow rounded-lg bg-gray-200 px-3 py-2 ">
+            <span className=" text-xs font-bold">{`${year}/${month}`}</span>
           </div>
         </div>
       )}
