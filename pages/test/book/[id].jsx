@@ -17,16 +17,10 @@ function BookPage() {
     }
   }, [id]);
   return (
-    <div className="bg-gray-200 ">
-      <div className={`   flex  min-h-screen    `}>
-        <div className="flex w-full justify-center p-4 ">
-          {!!data.length && <ReadQuestions data={data} book={id} />}
-        </div>
-      </div>
+    <div className="bg-gray-200  min-h-screen ">
+      {!!data.length && <ReadQuestions data={data} />}
     </div>
   );
 }
 
 export default BookPage;
-
-

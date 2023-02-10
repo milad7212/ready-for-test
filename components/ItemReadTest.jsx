@@ -9,7 +9,7 @@ function ItemReadTest({
   changeQuestion,
   selectAnsQuestion,
   indexQuestion,
-  deletedAnsQuestion,
+  
   bookedAnsQuestion,
 }) {
   const {
@@ -78,9 +78,9 @@ function ItemReadTest({
        
         <BsFillCaretRightFill onClick={() => {
             changeQuestion(1);
-          }} className="text-ciCurrentLine cursor-pointer hover:scale-105 active:scale-95 " size={25}/>
+          }} className=" cursor-pointer hover:scale-105 active:scale-95 " size={25}/>
         
-        <BsFillCaretLeftFill onClick={() => changeQuestion(-1)} className="text-ciCurrentLine cursor-pointer hover:scale-105 active:scale-95 " size={25}/>
+        <BsFillCaretLeftFill onClick={() => changeQuestion(-1)} className=" cursor-pointer hover:scale-105 active:scale-95 " size={25}/>
         {showAnswer ? (
           <RiEye2Line
             size={25}
@@ -98,7 +98,7 @@ function ItemReadTest({
         <BookMarkIcon
           onClick={() => bookedAnsQuestion(indexQuestion)}
           className={` mr-auto duration-200 ease-in active:scale-90 ${
-            data.booked ? "fill-ciOrange" : ""
+            data.booked ? "fill-orange-400" : ""
           }`}
         />
       </div>

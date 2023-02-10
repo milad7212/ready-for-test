@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import { testDatas } from "../utils/Output";
+
 import BookMarkIcon from "./icons/BookMarkIcon";
 import ItemReadTest from "./ItemReadTest";
 
-function ReadQuestions({ book,data }) {
+function ReadQuestions({ data }) {
   
   const [witchQuestion, setWitchQuestion] = useState(0);
 
@@ -30,7 +30,7 @@ function ReadQuestions({ book,data }) {
 
   function choiceStyle(value) {
     if (value == witchQuestion) {
-      return "bg-ciGreen shadow-lg -translate-y-1  ";
+      return "bg-gray-400 shadow-lg -translate-y-1  ";
     } else {
       return "bg-gray-300";
     }
@@ -72,8 +72,8 @@ function ReadQuestions({ book,data }) {
     setQuestions(newQuestion);
   }
   return (
-    <div className=" ">
-      <div className="mt-1 md:mt-6">
+    <>
+      <div className="pt-1 md:pt-6">
         {!!questions.length && (
           <ItemReadTest
             data={questions[witchQuestion]}
@@ -86,7 +86,7 @@ function ReadQuestions({ book,data }) {
         )}
       </div>
       <div
-        className=" mt-9  flex  w-full flex-wrap gap-1 max-w-6xl   md:mt-8"
+        className=" mt-9  flex   w-full flex-wrap gap-1 max-w-6xl   md:mt-8"
         style={{ direction: "ltr" }}
       >
         {questions?.map((item, index) => (
@@ -106,7 +106,7 @@ function ReadQuestions({ book,data }) {
           </span>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
