@@ -5,7 +5,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { CiSquareCheck } from "react-icons/ci";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import NavLinksMobile from "./NavLinksMobile";
-
+import {GrFormClose} from 'react-icons/gr'
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (

@@ -4,7 +4,7 @@ import { SiBookstack } from "react-icons/si";
 import Link from "next/link";
 
 function ListBooksExam({ title, data }) {
-  console.log("milad", data);
+  
   return (
     <div className=" mx-auto max-w-7xl px-4">
       <div className="my-20 mx-auto flex flex-col items-center justify-between sm:flex-row">

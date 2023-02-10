@@ -28,7 +28,7 @@ const NavLinks = () => {
 
               <IoIosArrowDown className="mr-2" />
             </h1>
-            {link.submenu && (
+            {link?.submenu && (
               <div>
                 <div className="absolute  top-10 hidden hover:md:block group-hover:md:block">
                   <div className="py-3">
@@ -101,8 +101,8 @@ const NavLinks = () => {
                       subHeading === slinks.Head ? "md:hidden" : "hidden"
                     }`}
                   >
-                    {slinks.sublink.map((slink) => (
-                      <li className="py-3 pl-14">
+                    {slinks.sublink.map((slink,index) => (
+                      <li key={index} className="py-3 pl-14">
                         <a href={slink.link}>{slink.name}</a>
                       </li>
                     ))}

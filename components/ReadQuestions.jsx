@@ -4,10 +4,11 @@ import { testDatas } from "../utils/Output";
 import BookMarkIcon from "./icons/BookMarkIcon";
 import ItemReadTest from "./ItemReadTest";
 
-function ReadQuestions({ book }) {
+function ReadQuestions({ book,data }) {
+  
   const [witchQuestion, setWitchQuestion] = useState(0);
 
-  const [questions, setQuestions] = useState(testDatas?.[book] ?? []);
+  const [questions, setQuestions] = useState(data);
 
   // const buildItemsQuestions=new Array(testsData.length).
 
@@ -67,7 +68,7 @@ function ReadQuestions({ book }) {
         booked: true,
       };
     }
-    console.log("newQuestion", newQuestion);
+    
     setQuestions(newQuestion);
   }
   return (

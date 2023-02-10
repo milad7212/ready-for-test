@@ -15,7 +15,7 @@ function ExamPage() {
     if(field){
       async function fetchData() {
         const {data}=await getResource({examFiled:field,examSubFiled:titleExam})
-        console.log(data);
+       
         setData(data)
         
       }
