@@ -3,6 +3,7 @@ import React from "react";
 
 
 function ExplainBook({data}) {
+  console.log('data :>> ', data);
   return (
     <section className="mt-10 mb-9">
       <div className="mx-auto max-w-7xl px-4">
@@ -26,7 +27,7 @@ function ExplainBook({data}) {
                 <div className="flex flex-col items-center justify-between lg:ml-3 lg:flex-row">
                   <div className="flex flex-col items-center lg:flex-row">
                     <Link
-                      href="/test/book/5"
+                      href={`/test/book/${data.number}`}
                       className="group flex h-10 items-center rounded border border-green-700 bg-green-700 px-4 text-sm font-bold text-white transition duration-200 hover:bg-transparent hover:text-green-700 md:h-14 md:px-9 md:text-lg"
                     >
                       نهایی سازی خرید و شروع 
