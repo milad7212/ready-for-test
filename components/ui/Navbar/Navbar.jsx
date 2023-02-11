@@ -6,9 +6,13 @@ import { CiSquareCheck } from "react-icons/ci";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import NavLinksMobile from "./NavLinksMobile";
 import {GrFormClose} from 'react-icons/gr'
+import Link from "next/link";
 const Navbar = () => {
+
   const [open, setOpen] = useState(false);
+
   return (
+
     <nav className="bg-gray-200 py-3 px-8 shadow-xl">
       <div className="flex items-center justify-between font-medium">
         <div className="flex items-center gap-2">
@@ -19,7 +23,8 @@ const Navbar = () => {
               <AiOutlineMenu className="text-gray-500" />
             )}
           </div>
-          <div className=" mr-4  flex w-full justify-between md:w-auto">
+          <Link href='/'>
+          <div className=" mr-4  hover:scale-125 duration-200 ease-out  flex w-full justify-between md:w-auto">
             
             <CiSquareCheck
               src=""
@@ -28,6 +33,7 @@ const Navbar = () => {
               className=" text-ciBackBeauty md:cursor-pointer"
             />
           </div>
+          </Link>
           <ul className="hidden items-center gap-8 md:flex ">
             <NavLinks />
           </ul>

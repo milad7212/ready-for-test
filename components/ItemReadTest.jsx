@@ -9,12 +9,10 @@ function ItemReadTest({
   changeQuestion,
   selectAnsQuestion,
   indexQuestion,
-  
   bookedAnsQuestion,
 }) {
   const {
-  
-    option1,
+      option1,
     option2,
     option3,
     option4,
@@ -24,26 +22,19 @@ function ItemReadTest({
     paragraph,
     pageNumber,
   } = data;
+
   const [showAnswer, setShowAnswer] = useState(false);
-  function onChangeValue(event) {
-    selectAnsQuestion(event.target.value, indexQuestion);
-  }
-  function classForCorrectAns(witchOption) {
-    if (witchOption == correctAnswer && showAnswer) {
-      return "shadow-test rounded-lg  bg-green-400 px-4 py-2 text-justify text-sm font-bold";
-    } else {
-      return "";
-    }
-  }
+
+  
 
   return (
-    <div className="relative m-2 mx-auto max-w-5xl rounded-lg bg-gray-100   p-3 shadow-md md:p-4 ">
+    <div className="relative m-2 mx-auto max-w-5xl rounded-lg bg-gray-100 min-h-[400px] flex flex-col  p-3 shadow-md md:p-4 ">
       <p className="my-4  text-justify text-sm font-bold md:text-base">
         {data.question}
       </p>
 
       <div
-        className=" mb-4 flex flex-col   gap-4 py-2"
+        className=" mb-4 flex flex-col flex-1   gap-4 py-2"
         onChange={() => onChangeValue(event)}
       >
         <div className="flex ">
@@ -74,7 +65,7 @@ function ItemReadTest({
           </div>
         </div>
       )}
-      <div className="flex  items-center  ">
+      <div className="flex   items-center  ">
        
         <BsFillCaretRightFill onClick={() => {
             changeQuestion(1);
@@ -110,6 +101,19 @@ function ItemReadTest({
       </div>}
     </div>
   );
+
+
+
+  function onChangeValue(event) {
+    selectAnsQuestion(event.target.value, indexQuestion);
+  }
+  function classForCorrectAns(witchOption) {
+    if (witchOption == correctAnswer && showAnswer) {
+      return "shadow-test rounded-lg  bg-green-400 px-4 py-2 text-justify text-sm font-bold";
+    } else {
+      return "";
+    }
+  }
 }
 
 export default ItemReadTest;

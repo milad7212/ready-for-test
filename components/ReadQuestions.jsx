@@ -1,22 +1,51 @@
 import React, { useState } from "react";
 
-
 import BookMarkIcon from "./icons/BookMarkIcon";
 import ItemReadTest from "./ItemReadTest";
 
 function ReadQuestions({ data }) {
-  
-  const [witchQuestion, setWitchQuestion] = useState(0);
 
+
+  const [witchQuestion, setWitchQuestion] = useState(0);
   const [questions, setQuestions] = useState(data);
 
-  // const buildItemsQuestions=new Array(testsData.length).
-
-  // status for every question
-  // answered
-  // reminder
-  // nothing
-  // { number: item.number, status: "noting", correct: "", answer: "" };
+  
+  return (
+    <>
+      <div className="pt-1 px-2 md:pt-6">
+        {!!questions.length && (
+          <ItemReadTest
+            data={questions[witchQuestion]}
+            indexQuestion={witchQuestion}
+            changeQuestion={changeQuestion}
+            selectAnsQuestion={selectAnsQuestion}
+            bookedAnsQuestion={bookedAnsQuestion}
+          />
+        )}
+      </div>
+      <div
+        className=" mt-9 px-2  flex   w-full flex-wrap gap-1 max-w-6xl mx-auto   md:mt-8"
+        style={{ direction: "ltr" }}
+      >
+        {questions?.map((item, index) => (
+          <span
+            onClick={() => changeCertainQuestion(index)}
+            key={index}
+            className={`${choiceStyle(
+              index
+            )} relative flex h-6 w-6 cursor-pointer items-center justify-center rounded-lg text-xs font-bold duration-100 active:scale-90`}
+          >
+            {index + 1}
+            {item.booked && (
+              <span className="absolute -top-4 left-0 right-0 flex justify-center">
+                <BookMarkIcon className="h-3 w-3 fill-orange-300 " />
+              </span>
+            )}
+          </span>
+        ))}
+      </div>
+    </>
+  );
 
   function changeQuestion(value) {
     let newTest = witchQuestion + value;
@@ -45,15 +74,6 @@ function ReadQuestions({ data }) {
     setQuestions(newQuestion);
   }
 
-  function deletedAnsQuestion(indexQuestion) {
-    let newQuestion = [...questions];
-    newQuestion[indexQuestion] = {
-      ...newQuestion[indexQuestion],
-      answer: "",
-    };
-    setQuestions(newQuestion);
-  }
-
   function bookedAnsQuestion(indexQuestion) {
     let newQuestion = [...questions];
 
@@ -68,46 +88,9 @@ function ReadQuestions({ data }) {
         booked: true,
       };
     }
-    
+
     setQuestions(newQuestion);
   }
-  return (
-    <>
-      <div className="pt-1 md:pt-6">
-        {!!questions.length && (
-          <ItemReadTest
-            data={questions[witchQuestion]}
-            indexQuestion={witchQuestion}
-            changeQuestion={changeQuestion}
-            deletedAnsQuestion={deletedAnsQuestion}
-            selectAnsQuestion={selectAnsQuestion}
-            bookedAnsQuestion={bookedAnsQuestion}
-          />
-        )}
-      </div>
-      <div
-        className=" mt-9  flex   w-full flex-wrap gap-1 max-w-6xl   md:mt-8"
-        style={{ direction: "ltr" }}
-      >
-        {questions?.map((item, index) => (
-          <span
-            onClick={() => changeCertainQuestion(index)}
-            key={index}
-            className={`${choiceStyle(
-              index
-            )} relative flex h-6 w-6 cursor-pointer items-center justify-center rounded-lg text-xs font-bold duration-100 active:scale-90`}
-          >
-            {index + 1}
-            {item.booked && (
-              <span className="absolute -top-4 left-0 right-0 flex justify-center">
-                <BookMarkIcon className="h-3 w-3 fill-orange-300 " />
-              </span>
-            )}
-          </span>
-        ))}
-      </div>
-    </>
-  );
 }
 
 export default ReadQuestions;

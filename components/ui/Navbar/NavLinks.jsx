@@ -30,7 +30,7 @@ const NavLinks = () => {
             </h1>
             {link?.submenu && (
               <div>
-                <div className="absolute  top-10 hidden hover:md:block group-hover:md:block">
+                <div className="absolute  top-10 hidden z-50 hover:md:block group-hover:md:block">
                   <div className="py-3">
                     <div
                       className="absolute right-3 mt-1 h-4 
