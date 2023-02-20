@@ -40,13 +40,13 @@ function ItemReadTest({
         <div className="flex ">
           <p className={classForCorrectAns(1)}>1. {option1}</p>
         </div>
-        <div className="flex text-justify text-sm">
+        <div className="flex text-justify ">
           <p className={classForCorrectAns(2)}>2. {option2}</p>
         </div>
-        <div className="flex text-justify text-sm">
+        <div className="flex text-justify ">
           <p className={classForCorrectAns(3)}>3. {option3}</p>
         </div>
-        <div className="flex text-justify text-sm">
+        <div className="flex text-justify ">
           <p className={classForCorrectAns(4)}>4. {option4}</p>
         </div>
       </div>

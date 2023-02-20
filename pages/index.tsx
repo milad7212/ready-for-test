@@ -18,7 +18,7 @@ export default function Home() {
       <Navbar />
       <div className="container mx-auto px-6 flex flex-col">
         <Hero />
-        <StartExam/>
+        {/* <StartExam/> */}
        
         <WhyUse/>
         <ShowItemTest/>
