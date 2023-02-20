@@ -39,11 +39,19 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="">
-          <FaRegUser
+        <div className="flex items-center gap-4 font-bold">
+          <Link href='/login'>
+          
+          <p className="text-gray-500 transition-all duration-200 ease-out hover:scale-105 hover:text-blue-600">ورود</p>
+          </Link>
+          <Link href='/register'>
+          <p className="text-gray-500 transition-all duration-200 ease-out hover:scale-105 hover:text-blue-600">ثبت نام</p>
+          </Link>
+
+          {false &&<FaRegUser
             size={30}
-            className="cursor-pointer text-gray-500 transition-all duration-200 ease-out hover:scale-105 hover:text-ciPurple"
-          />
+            className="cursor-pointer text-gray-500 transition-all duration-200 ease-out hover:scale-105 hover:text-blue-600"
+          />}
         </div>
         {/* Mobile nav */}
         <div

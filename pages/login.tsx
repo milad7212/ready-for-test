@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function login() {
@@ -53,12 +54,12 @@ function login() {
         </div>
         <p className="text-xs italic mt-4 text-gray-500">
           قبلا ثبت نام نکردی؟
-          <a
-            href="#"
+          <Link
+            href="/register"
             className="no-underline mr-1 font-bold text-blue-500 hover:text-blue-700 transition ease-in-out duration:150"
           >
             ثبت نام
-          </a>
+          </Link>
         </p>
       </div>
     </div>
