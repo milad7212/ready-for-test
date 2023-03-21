@@ -2,25 +2,29 @@ import React, { useState } from "react";
 
 import BookMarkIcon from "./icons/BookMarkIcon";
 import ItemReadTest from "./ItemReadTest";
+import LockPage from "./Lock";
 
 function ReadQuestions({ data }) {
-
-
   const [witchQuestion, setWitchQuestion] = useState(0);
   const [questions, setQuestions] = useState(data);
 
-  
   return (
     <>
       <div className="pt-1 px-2 md:pt-6">
         {!!questions.length && (
-          <ItemReadTest
-            data={questions[witchQuestion]}
-            indexQuestion={witchQuestion}
-            changeQuestion={changeQuestion}
-            selectAnsQuestion={selectAnsQuestion}
-            bookedAnsQuestion={bookedAnsQuestion}
-          />
+          <>
+            {witchQuestion > 3 ? (
+              <LockPage />
+            ) : (
+              <ItemReadTest
+                data={questions[witchQuestion]}
+                indexQuestion={witchQuestion}
+                changeQuestion={changeQuestion}
+                selectAnsQuestion={selectAnsQuestion}
+                bookedAnsQuestion={bookedAnsQuestion}
+              />
+            )}
+          </>
         )}
       </div>
       <div

@@ -21,7 +21,7 @@ function BookPage() {
   return (
     <div className="bg-gray-200  min-h-screen ">
       <Navbar/>
-      <LockPage/>
+      
       {!!data.length && <ReadQuestions data={data} />}
     </div>
   );
