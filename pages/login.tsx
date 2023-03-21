@@ -43,12 +43,12 @@ function login() {
               >
                 ورود
               </button>
-              <a
-                href="#"
+              <Link
+                href="/register"
                 className="inline-block items-center justify-center px-2 py-1 text-xs font-bold leading-none uppercase tracking-wide bg-gray-200 hover:bg-gray-300 rounded text-gray-500 hover:text-white focus:outline focus:shadow outline-none active:bg-gray-400 active:text-white transition ease-in-out duration-150"
               >
                 فراموشی رمز؟
-              </a>
+              </Link>
             </div>
           </form>
         </div>

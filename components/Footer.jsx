@@ -56,7 +56,7 @@ function Footer() {
             </a>
           </div>
         </div>
-        <div>
+        {/* <div>
           <span className="text-base font-bold tracking-wide text-gray-900">
             لینک های مهم
           </span>
@@ -91,7 +91,7 @@ function Footer() {
             Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken
             spare ribs salami.
           </p>
-        </div>
+        </div> */}
       </div>
       
     </div>
