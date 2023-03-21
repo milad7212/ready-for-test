@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { HiHome } from "react-icons/hi2";
 import { IoIosArrowBack } from "react-icons/io";
@@ -10,13 +11,13 @@ function Breadcrumbs({ title, subTitle }) {
     >
       <ol className="inline-flex items-center ">
         <li className="inline-flex items-center">
-          <a
-            href="#"
+          <Link
+            href="/"
             className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600"
           >
             <HiHome className="mx-1 text-gray-500" size={20} />
             خانه
-          </a>
+          </Link>
         </li>
         <Item name={title} />
         <Item name={subTitle} />
@@ -32,12 +33,12 @@ function Item({ name }) {
     <li>
       <div className="flex items-center">
         <IoIosArrowBack  className="mx-1"/>
-        <a
-          href="#"
-          className=" text-sm font-bold  text-gray-700 hover:text-blue-600 "
+        <div
+         
+          className=" text-sm font-bold  text-gray-700  "
         >
           {name}
-        </a>
+        </div>
       </div>
     </li>
   );
