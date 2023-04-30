@@ -40,13 +40,13 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-4 font-bold">
-          <Link href='/login'>
+          {/* <Link href='/login'>
           
           <p className="text-gray-500 transition-all duration-200 ease-out hover:scale-105 hover:text-blue-600">ورود</p>
           </Link>
           <Link href='/register'>
           <p className="text-gray-500 transition-all duration-200 ease-out hover:scale-105 hover:text-blue-600">ثبت نام</p>
-          </Link>
+          </Link> */}
 
           {false &&<FaRegUser
             size={30}

@@ -2,9 +2,9 @@ import React from "react";
 
 function ContactWhitMe() {
   return (
-    <div className="container mx-auto px-6 py-16">
-      <div className="items-center lg:flex">
-        <div className="w-full lg:w-1/2">
+    <div className=" flex justify-center items-center">
+      {/* <div className="items-center lg:flex">
+         <div className="w-full lg:w-1/2">
           <div className="lg:max-w-lg">
             <h1 className="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">
               <span className="text-blue-500">با خبر </span>
@@ -37,7 +37,14 @@ function ContactWhitMe() {
             alt="email illustration vector art"
           />
         </div>
-      </div>
+      </div> */}
+      <div className="mt-6 flex w-full items-center justify-center lg:mt-0 lg:w-1/2">
+          <img
+            className="h-full w-full max-w-md rounded-full  shadow"
+            src="/images/foundation/contact.png"
+            alt="email illustration vector art"
+          />
+        </div>
     </div>
   );
 }

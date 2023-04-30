@@ -12,19 +12,13 @@ function ReadQuestions({ data }) {
     <>
       <div className="pt-1 px-2 md:pt-6">
         {!!questions.length && (
-          <>
-            {witchQuestion > 3 ? (
-              <LockPage />
-            ) : (
-              <ItemReadTest
-                data={questions[witchQuestion]}
-                indexQuestion={witchQuestion}
-                changeQuestion={changeQuestion}
-                selectAnsQuestion={selectAnsQuestion}
-                bookedAnsQuestion={bookedAnsQuestion}
-              />
-            )}
-          </>
+          <ItemReadTest
+            data={questions[witchQuestion]}
+            indexQuestion={witchQuestion}
+            changeQuestion={changeQuestion}
+            selectAnsQuestion={selectAnsQuestion}
+            bookedAnsQuestion={bookedAnsQuestion}
+          />
         )}
       </div>
       <div
