@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function login() {
+function Login() {
   const [whichStep, setWhichStep] = useState("phoneNumber");
   return (
     <div className="bg-gray-100 h-screen flex flex-col items-center justify-center">
@@ -126,4 +126,4 @@ function login() {
   );
 }
 
-export default login;
+export default Login;
