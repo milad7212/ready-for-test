@@ -7,3 +7,9 @@ export const getTest = (id:String) => {
     
     return axios.get(url)
 };
+
+
+
+
+
+
