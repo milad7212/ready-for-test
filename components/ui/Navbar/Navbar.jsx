@@ -7,9 +7,13 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 import NavLinksMobile from "./NavLinksMobile";
 import {GrFormClose} from 'react-icons/gr'
 import Link from "next/link";
+
 const Navbar = () => {
 
   const [open, setOpen] = useState(false);
+  function closeMenu(){
+    setOpen(false)
+  }
 
   return (
 
@@ -56,7 +60,7 @@ const Navbar = () => {
         {/* Mobile nav */}
         <div
           className={`
-        fixed top-0 bottom-0 w-full overflow-y-auto bg-gray-100 p-4 duration-500
+        fixed top-0 z-50 bottom-0 w-full overflow-y-auto bg-gray-100 p-4 duration-500
         md:hidden ${open ? "right-0" : "right-[-100%]"}
         `}
         >
@@ -83,7 +87,7 @@ const Navbar = () => {
             فهرست
           </p>
 
-          <NavLinksMobile />
+          <NavLinksMobile closeMenu={closeMenu} />
         </div>
       </div>
     </nav>

@@ -35,7 +35,7 @@ function ReadQuestions({ data }) {
           >
             {index + 1}
             {item.booked && (
-              <span className="absolute -top-4 left-0 right-0 flex justify-center">
+              <span className="absolute -top-2 left-0 right-0 flex justify-center">
                 <BookMarkIcon className="h-3 w-3 fill-orange-300 " />
               </span>
             )}

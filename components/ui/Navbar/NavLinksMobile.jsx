@@ -1,16 +1,18 @@
 import React, { useState } from "react";
-
+import { useRouter } from "next/router";
 import { links } from "./Mylinks";
 
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-function NavLinksMobile() {
+function NavLinksMobile({closeMenu}) {
+  const router =useRouter();
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
   return (
     <>
       {links.map((link, index) => (
         <div key={index}>
+        
           <div className="group mb-1 rounded-md bg-blue-100 py-3 px-3 text-right shadow ">
             <h1
               className="group flex items-center justify-between  "
@@ -60,8 +62,13 @@ function NavLinksMobile() {
                     {slinks.sublink.map((slink, index) => (
                       <div
                         key={index}
-                        className="mb-1  shadow rounded-sm py-2 pr-6 font-bold"
+                        onClick={()=>{
+                          router.push(`/${slinks.Head}/${slink.name}/`),
+                          closeMenu()
+                        }}
+                        className="my-3 first-of-type:mt-6 bg-gray-200  last-of-type:mb-6 shadow rounded-md active:scale-90 duration-200 transition-all ease-out py-3 pr-6 font-bold"
                       >
+                        
                         {slink.name}
                       </div>
                     ))}

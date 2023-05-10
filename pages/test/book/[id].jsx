@@ -4,6 +4,7 @@ import { getTest } from "../../../services/testService";
 import ReadQuestions from "../../../components/ReadQuestions";
 import Navbar from "../../../components/ui/Navbar/Navbar";
 import LockPage from "../../../components/Lock";
+import Head from "next/head";
 
 function BookPage() {
   const router = useRouter();
@@ -20,6 +21,9 @@ function BookPage() {
   }, [id]);
   return (
     <div className="bg-gray-200  min-h-screen ">
+      <Head>
+        <title>مطالعه آزمون نظام مهندسی</title>
+      </Head>
       <Navbar/>
       
       {!!data.length && <ReadQuestions data={data} />}

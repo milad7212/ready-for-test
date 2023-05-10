@@ -5,6 +5,7 @@ import Navbar from "../../components/ui/Navbar/Navbar";
 import Footer from "../../components/Footer";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import ListBooksExam from "../../components/ListBooksExam";
+import Head from "next/head";
 
 function ExamPage() {
   const router = useRouter();
@@ -42,6 +43,9 @@ function ExamPage() {
 
   return (
     <div className="relative min-h-screen bg-gray-200  ">
+      <Head>
+      <title>{`${field} | ${titleExam}`}</title>
+      </Head>
       <Navbar />
       <div className="min-h-screen">
         <Breadcrumbs title={field} subTitle={titleExam} />
