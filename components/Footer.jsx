@@ -53,7 +53,7 @@ function Footer() {
               title="Our address"
               className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
             >
-              کرمان - پارک علم و فناوری- شرکت آماده برای آزمون
+              رفسنجان-مرکز نوآوری شهید ستاری 
             </a>
           </div>
         </div>
